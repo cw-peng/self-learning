@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ai-learning-template/config-schema.json",
+  "title": "AI Learning Workspace Configuration",
+  "description": "Schema for config.json — the single source of truth for the learning workspace.",
+  "type": "object",
+  "required": ["workspace", "directories", "learning", "claude"],
+  "properties": {
+    "workspace": {
+      "type": "object",
+      "description": "Workspace identity and metadata.",
+      "required": ["name", "title", "author", "language", "goal", "startDate", "estimatedDuration"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Filesystem-safe project name. No spaces or special characters.",
+          "pattern": "^[a-zA-Z0-9_-]+$",
+          "examples": ["cpp-learning"]
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable display name.",
+          "examples": ["C++ Deep Learning Journey"]
+        },
+        "author": {
+          "type": "string",
+          "description": "Your name.",
+          "examples": ["Zhang Wei"]
+        },
+        "language": {
+          "type": "string",
+          "description": "Target programming language or technical domain.",
+          "examples": ["C++", "Python", "Rust", "Linux", "Kubernetes"]
+        },
+        "goal": {
+          "type": "string",
+          "description": "High-level learning objective.",
+          "examples": ["Master C++20 and build a game engine from scratch"]
+        },
+        "startDate": {
+          "type": "string",
+          "description": "Learning start date.",
+          "format": "date",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "examples": ["2026-07-12"]
+        },
+        "estimatedDuration": {
+          "type": "string",
+          "description": "Expected duration of the learning plan.",
+          "examples": ["90 days", "6 months"]
+        }
+      }
+    },
+    "directories": {
+      "type": "object",
+      "description": "Custom directory names. Change these to rename directories across the workspace.",
+      "required": ["notes", "journal", "exercises", "projects", "review", "snippets", "resources", "prompts", "docs", "scripts"],
+      "properties": {
+        "notes": { "type": "string", "default": "notes", "examples": ["knowledge"] },
+        "journal": { "type": "string", "default": "journal", "examples": ["learning-log"] },
+        "exercises": { "type": "string", "default": "exercises", "examples": ["practice"] },
+        "projects": { "type": "string", "default": "projects", "examples": ["labs"] },
+        "review": { "type": "string", "default": "review", "examples": ["retrospectives"] },
+        "snippets": { "type": "string", "default": "snippets", "examples": ["code-snippets"] },
+        "resources": { "type": "string", "default": "resources", "examples": ["references"] },
+        "prompts": { "type": "string", "default": "prompts", "examples": ["ai-prompts"] },
+        "docs": { "type": "string", "default": "docs", "examples": ["documentation"] },
+        "scripts": { "type": "string", "default": "scripts", "examples": ["tools"] }
+      }
+    },
+    "learning": {
+      "type": "object",
+      "description": "Learning parameters and cadence.",
+      "required": ["dailyHours", "weeklyReviewDay", "reviewCycleDays"],
+      "properties": {
+        "dailyHours": {
+          "type": "number",
+          "description": "Expected daily study hours.",
+          "minimum": 0.5,
+          "maximum": 16,
+          "default": 2
+        },
+        "weeklyReviewDay": {
+          "type": "string",
+          "description": "Day of the week for weekly review.",
+          "enum": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "default": "Sunday"
+        },
+        "reviewCycleDays": {
+          "type": "number",
+          "description": "Days between formal reviews.",
+          "minimum": 1,
+          "maximum": 30,
+          "default": 7
+        }
+      }
+    },
+    "claude": {
+      "type": "object",
+      "description": "Claude Code AI behavior configuration.",
+      "required": ["communicationLanguage", "expertiseArea"],
+      "properties": {
+        "communicationLanguage": {
+          "type": "string",
+          "description": "Language for Claude's explanations and journal entries.",
+          "default": "Chinese",
+          "examples": ["Chinese", "English", "Japanese"]
+        },
+        "expertiseArea": {
+          "type": "string",
+          "description": "Claude's assumed expertise focus area.",
+          "default": "",
+          "examples": ["C++ systems programming"]
+        }
+      }
+    }
+  }
+}

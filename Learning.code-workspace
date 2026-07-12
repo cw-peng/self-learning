@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "name": "{{WORKSPACE_TITLE}}",
+      "path": "."
+    },
+    {
+      "name": "Projects",
+      "path": "./{{DIR_PROJECTS}}"
+    }
+  ],
+  "settings": {
+    "claude-code.enabled": true,
+    "claude-code.projectRoot": "${workspaceFolder}",
+    "editor.formatOnSave": true,
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/build": true,
+      "**/dist": true,
+      "**/target": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "anthropic.claude-code"
+    ]
+  }
+}

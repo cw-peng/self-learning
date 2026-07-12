@@ -1,0 +1,37 @@
+{
+  "$schema": "./docs/config-schema.json",
+
+  "workspace": {
+    "name": "cpp-learning",
+    "title": "C++ Deep Learning Journey",
+    "author": "Your Name",
+    "language": "C++",
+    "goal": "Master C++20 and build a game engine from scratch",
+    "startDate": "2026-07-12",
+    "estimatedDuration": "90 days"
+  },
+
+  "directories": {
+    "notes": "notes",
+    "journal": "journal",
+    "exercises": "exercises",
+    "projects": "projects",
+    "review": "review",
+    "snippets": "snippets",
+    "resources": "resources",
+    "prompts": "prompts",
+    "docs": "docs",
+    "scripts": "scripts"
+  },
+
+  "learning": {
+    "dailyHours": 2,
+    "weeklyReviewDay": "Sunday",
+    "reviewCycleDays": 7
+  },
+
+  "claude": {
+    "communicationLanguage": "Chinese",
+    "expertiseArea": "C++ systems programming"
+  }
+}

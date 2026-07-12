@@ -1,0 +1,42 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Build artifacts (language-agnostic)
+build/
+dist/
+out/
+target/
+*.o
+*.obj
+*.class
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets / local config
+.env
+*.local
+*.local.*
+
+# Large binary files (template policy: no binaries in repo)
+*.zip
+*.tar.gz
+*.7z
+*.pdf
+*.mp4
+*.mp3
+
+# Keep the directory structure
+!**/.gitkeep
