@@ -65,6 +65,7 @@ This template gives you a **complete learning workspace** — directory structur
 ```bash
 git clone https://github.com/cw-peng/self-learning.git my-learning
 cd my-learning
+rm -rf .git && git init    # start fresh — this is YOUR learning repo
 ```
 
 ### 2. Edit config.json

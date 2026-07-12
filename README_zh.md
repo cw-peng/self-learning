@@ -67,6 +67,7 @@
 ```bash
 git clone https://github.com/cw-peng/self-learning.git my-learning
 cd my-learning
+rm -rf .git && git init    # 全新开始——这是你的学习仓库
 ```
 
 ### 2. 编辑 config.json
