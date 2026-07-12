@@ -8,6 +8,7 @@ Desktop.ini
 *.swp
 *.swo
 *~
+.vscode/
 
 # Build artifacts (language-agnostic)
 build/
