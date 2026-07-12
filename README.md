@@ -27,9 +27,11 @@
 
 *After running `init.ps1`, the placeholders below become your project's identity. On GitHub this section shows the template defaults — clone, configure, and it's yours.*
 
-**{{WORKSPACE_TITLE}}** — {{GOAL}}
-
-**Author:** {{AUTHOR}} | **Started:** {{START_DATE}} | **Duration:** {{DURATION}} | **Daily:** ~{{DAILY_HOURS}}h
+> **{{WORKSPACE_TITLE}}**
+>
+> *{{GOAL}}*
+>
+> {{AUTHOR}} · Started {{START_DATE}} · {{DURATION}} · ~{{DAILY_HOURS}}h/day
 
 ---
 

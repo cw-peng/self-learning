@@ -27,9 +27,11 @@
 
 *运行 `init.ps1` 后，下方占位符将替换为你自己的项目信息。在 GitHub 上此处展示模板默认值 —— 克隆、配置、即可使用。*
 
-**{{WORKSPACE_TITLE}}** — {{GOAL}}
-
-**作者：** {{AUTHOR}} | **开始：** {{START_DATE}} | **周期：** {{DURATION}} | **每日：** ~{{DAILY_HOURS}} 小时
+> **{{WORKSPACE_TITLE}}**
+>
+> *{{GOAL}}*
+>
+> {{AUTHOR}} · 开始于 {{START_DATE}} · {{DURATION}} · 每日 ~{{DAILY_HOURS}} 小时
 
 ---
 
