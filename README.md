@@ -68,6 +68,14 @@ cd my-learning
 rm -rf .git && git init    # start fresh — this is YOUR learning repo
 ```
 
+Or in PowerShell:
+
+```powershell
+git clone https://github.com/cw-peng/self-learning.git my-learning
+cd my-learning
+Remove-Item -Recurse -Force .git; git init    # start fresh — this is YOUR learning repo
+```
+
 ### 2. Edit config.json
 
 Open `config.json` and personalize at minimum:

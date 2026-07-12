@@ -70,6 +70,14 @@ cd my-learning
 rm -rf .git && git init    # 全新开始——这是你的学习仓库
 ```
 
+或使用 PowerShell：
+
+```powershell
+git clone https://github.com/cw-peng/self-learning.git my-learning
+cd my-learning
+Remove-Item -Recurse -Force .git; git init    # 全新开始——这是你的学习仓库
+```
+
 ### 2. 编辑 config.json
 
 打开 `config.json`，最少修改以下字段：
